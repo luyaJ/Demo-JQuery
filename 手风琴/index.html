@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery手风琴</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <style>
+        #accordion{
+            margin: 50px;
+        }
+        dt,dd{
+            padding: 10px;
+            border: 1px solid black;
+            border-bottom: 0;
+        }
+        dt{
+            font-size: 18px;
+            font-weight: bold;
+            border-bottom: 1px solid black;
+        }
+        dd:last-of-type{
+            border-bottom: 1px solid black;
+        }
+        dd{
+            border-top: 1px solid white;
+            position: relative;
+            top: -1px;
+        }
+        dt a{
+            text-decoration: none;
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+<dl id="accordion">
+    <dt><a href="">Panel 1</a></dt>
+    <dd>hello world!</dd>
+
+    <dt><a href="">Panel 2</a></dt>
+    <dd>webstorm hello</dd>
+
+    <dt><a href="">Panel 3</a></dt>
+    <dd>xixixixixixixixixixi~</dd>
+</dl>
+</body>
+</html>
