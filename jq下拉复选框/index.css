@@ -1,0 +1,32 @@
+body{
+    background-color: #374954;
+}
+#dropdown dt{
+    height: 20px;
+    width: 285px;
+    background: #4F6877;
+    padding: 7px 10px 8px 5px;
+    cursor: pointer;
+}
+#dropdown dt a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+#multi{
+    height: 100px;
+    background: #4F6877;
+    width: 300px;
+    overflow: auto;
+    left: -40px;
+    position: relative;
+    top: 2px;
+}
+#multi li{
+    list-style: none;
+    color: #fff;
+    font-size: 14px;
+    left: -30px;
+    position: relative;
+}
