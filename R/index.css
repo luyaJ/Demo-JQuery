@@ -1,0 +1,15 @@
+body{
+    margin:50px;
+    background-color:#2C3437;
+}
+.content div > div{
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    display: inline-block;
+}
+
+.content .mid{
+    background: salmon;
+    cursor: pointer;
+}
