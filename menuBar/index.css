@@ -1,0 +1,40 @@
+.home{
+    top:15px;
+    left: 15px;
+    width: 100px;
+    height: 100px;
+    background: darkseagreen;
+    border-radius: 50%;
+    color: #fff;
+    line-height: 120px;
+    text-align: center;
+    z-index: 3;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+.hat,.user,.envelope,.code{
+    background: silver;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 72px;
+    color: #fff;
+    position: absolute;
+    z-index: 2;
+}
+
+.hat{
+    transform: translate(0px,40px);
+}
+.user{
+    transform: translate(65px,30px);
+}
+.envelope{
+    transform: translate(120px,-10px);
+}
+.code{
+    transform: translate(160px,-65px);
+}
