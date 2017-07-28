@@ -1,0 +1,65 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+#container {
+  height: 400px;
+  width: 600px;
+  border: 5px solid #91Ad70;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer; }
+
+#images {
+  width: 4000px;
+  position: absolute; }
+  #images img {
+    height: 400px;
+    width: 600px;
+    float: left;
+    position: relative; }
+
+#circle {
+  position: absolute;
+  bottom: 15px;
+  left: 220px;
+  cursor: pointer; }
+  #circle span {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 1px solid #9d9d9d;
+    background: #6a6f8c;
+    float: left;
+    margin-left: 15px; }
+  #circle .on {
+    background: #ab3b3a; }
+
+#arrow {
+  top: 50%;
+  position: relative;
+  font-size: 40px;
+  line-height: 45px;
+  text-align: center;
+  color: #fff;
+  display: none;
+  cursor: pointer; }
+  #arrow #arrow_left {
+    float: left;
+    margin-left: 15px; }
+  #arrow #arrow_right {
+    float: right;
+    margin-right: 15px; }
+
+.arrow1 {
+  background: rgba(0, 0, 0, 0.5);
+  height: 50px;
+  width: 40px; }
+  .arrow1:hover {
+    background: black; }
+
+#container:hover #arrow {
+  display: block; }
+
+/*# sourceMappingURL=index.css.map */
