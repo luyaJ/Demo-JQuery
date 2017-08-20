@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>进度条4</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .loading{
+            height: 100%;
+            width: 100%;
+            background: #fff;
+            position: fixed;
+            z-index: 5;
+            top: 0;
+            left: 0;
+        }
+        .pic{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            font-size: 30px;
+            text-align: center;
+            line-height: 100px;
+        }
+        .pic span{
+            display: block;
+            width: 80px;
+            height: 80%;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            border-radius: 50%;
+            box-shadow: 0 3px 0 #666;
+            animation: rotate 1s infinite linear;
+            -webkit-animation: rotate 1s infinite linear;
+        }
+        @keyframes rotate {
+            0%{ transform: rotate(0deg); }
+            100%{ transform: rotate(360deg); }
+        }
+        @-webkit-keyframes rotate {
+            0%{ -webkit-transform: rotate(0deg); }
+            100%{ -webkit-transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+<div class="loading">
+    <div class="pic">
+        <span></span>
+        <b>0%</b>
+    </div>
+</div>
+<img src="images/diy-organic-candle.jpg" height="600" width="960"/>
+<img src="images/lh.jpg" height="600" width="960"/>
+<img src="images/o_1apvgjdd5ti17tqqoa1gkf1k8e7_new.jpg"/>
+<img src="images/people-coffee-tea-meeting.jpg" height="1050" width="1125"/>
+<img src="images/pexels-photo-296115.jpeg" height="750" width="1132"/>
+<img src="images/pexels-photo-322091.jpeg" height="750" width="1124"/>
+<img src="images/pexels-photo-365637.jpeg" height="750" width="1125"/>
+<img src="images/diy-organic-candle.jpg" height="600" width="960"/>
+<img src="images/lh.jpg" height="600" width="960"/>
+<img src="images/o_1apvgjdd5ti17tqqoa1gkf1k8e7_new.jpg"/>
+<img src="images/people-coffee-tea-meeting.jpg" height="1050" width="1125"/>
+<img src="images/pexels-photo-296115.jpeg" height="750" width="1132"/>
+<img src="images/pexels-photo-322091.jpeg" height="750" width="1124"/>
+<img src="images/pexels-photo-365637.jpeg" height="750" width="1125"/>
+<img src="images/diy-organic-candle.jpg" height="600" width="960"/>
+<img src="images/lh.jpg" height="600" width="960"/>
+<img src="images/pexels-photo-365637.jpeg" height="750" width="1125"/>
+<img src="images/diy-organic-candle.jpg" height="600" width="960"/>
+<img src="images/lh.jpg" height="600" width="960"/>
+<img src="images/o_1apvgjdd5ti17tqqoa1gkf1k8e7_new.jpg"/>
+<img src="images/people-coffee-tea-meeting.jpg" height="1050" width="1125"/>
+
+<img src="images/lh.jpg" height="600" width="960"/>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var num = 0;
+        $('img').each(function (i) {
+
+            var oImg = new Image();
+            oImg.onload = function () {
+
+                oImg.onload = null;
+                num++;
+                $(".loading b").html(num/$('img').size() * 100) + "%";
+                if(num >= i){
+                    $(".loading").fadeOut();
+                }
+            }
+            oImg.src = $('img')[i].src;
+        });
+    });
+</script>
+</body>
+</html>

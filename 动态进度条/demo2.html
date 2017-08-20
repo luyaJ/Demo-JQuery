@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3 进度条2</title>
+    <style>
+        .loading{
+            height: 100%;
+            width: 100%;
+            background: #fff;
+            position: fixed;
+            z-index: 5;
+            top: 0;
+            left: 0;
+        }
+        .pic{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        .pic i{
+            height: 50px;
+            width: 6px;
+            float: left;
+            background: #d58512;
+            margin: 0 2px;
+            display: block;
+            -webkit-transform: scaleY(0.4);
+            -ms-transform: scaleY(0.4);
+            transform: scaleY(0.4);
+            -webkit-animation: loading 1.2s infinite;
+            animation: loading 1.2s infinite;
+        }
+        .pic i:nth-child(2){ -webkit-animation-delay: 0.1s; animation-delay: 0.1s; }
+        .pic i:nth-child(3){ -webkit-animation-delay: 0.2s; animation-delay: 0.2s; }
+        .pic i:nth-child(4){ -webkit-animation-delay: 0.3s; animation-delay: 0.3s; }
+        .pic i:nth-child(5){ -webkit-animation-delay: 0.4s; animation-delay: 0.4s; }
+        @-webkit-keyframes loading {
+            0%,40%,100%{ -webkit-transform: scaleY(0.4); transform: scaleY(0.4) }
+            20%{ -webkit-transform: scaleY(1); transform: scaleY(1) }
+        }
+        @keyframes loading {
+            0%,40%,100%{ -webkit-transform: scaleY(0.4); transform: scaleY(0.4) }
+            20%{ -webkit-transform: scaleY(1); transform: scaleY(1) }
+        }
+    </style>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+        document.onreadystatechange = function(){
+            if(document.readyState == "complete"){
+                $(".loading").fadeOut();
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="loading">
+    <div class="pic">
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+    </div>
+</div>
+<img src="images/diy-organic-candle.jpg" height="600" width="960"/>
+<img src="images/lh.jpg" height="600" width="960"/>
+<img src="images/o_1apvgjdd5ti17tqqoa1gkf1k8e7_new.jpg"/>
+<img src="images/people-coffee-tea-meeting.jpg" height="1050" width="1125"/>
+<img src="images/pexels-photo-296115.jpeg" height="750" width="1132"/>
+<img src="images/pexels-photo-322091.jpeg" height="750" width="1124"/>
+<img src="images/pexels-photo-365637.jpeg" height="750" width="1125"/>
+</body>
+</html>
