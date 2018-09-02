@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jquery - 轮播图</title>
+  <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+    font-size: 0;  /* 除去浏览器间距 */
+  }
+
+  .swiper {
+    position: relative;
+    margin: 100px;
+    width: 300px;
+    height: 200px;
+    border: 5px solid #888;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .img-wrapper {
+    width: 1000px;
+    position: absolute; /* 需要设置图片绝对定位 */
+  }
+
+  .img-wrapper img {
+    display: inline-block;
+    height: 200px;
+    width: 300px;
+  }
+
+  .swiper ul {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+  }
+
+  .swiper .pot {
+    display: inline-block;
+    height: 6px;
+    width: 16px;
+    margin-right: 5px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .swiper .active {
+    width: 24px;
+    background: rgb(255, 255, 255);
+  }
+</style>
+
+<body>
+  <div class="swiper">
+      <div class="img-wrapper" style="left: 0px">
+        <img src="http://otnbkrzno.bkt.clouddn.com/3.jpg" width="300" height="200">
+        <img src="http://otnbkrzno.bkt.clouddn.com/12.jpg" width="300" height="200">
+      </div>
+
+     <ul>
+       <li class="pot active"></li>
+       <li class="pot"></li>
+     </ul>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
